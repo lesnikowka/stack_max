@@ -7,9 +7,9 @@ class StackMax {
 public:
 	StackMax() = default;
 
-	StackMax(const StackMax& st) : stack(st.stack), stack_max(st.stack_max) {}
+	StackMax(const StackMax<T>& st) : stack(st.stack), stack_max(st.stack_max) {}
 
-	StackMax& operator=(const StackMax& st) {
+	StackMax<T>& operator=(const StackMax<T>& st) {
 		stack = st.stack;
 		stack_max = st.stack_max;
 		return *this;
