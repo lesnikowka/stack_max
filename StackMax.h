@@ -34,11 +34,18 @@ public:
 	}
 
 	T top() {
+		if (stack.size() == 0) {
+			throw std::logic_error("stack if empty");
+			return T();
+		}
 		return stack.top();
 	}
 
 	T max() {
-		if (stack.size() == 0) throw std::logic_error("stack is empty");
-		else return stack_max.top();
+		if (stack.size() == 0) { 
+			throw std::logic_error("stack is empty");
+			return T();
+		}
+		return stack_max.top();
 	}
 };
